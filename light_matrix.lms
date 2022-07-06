@@ -1,0 +1,14 @@
+from mindstorms import MSHub
+from mindstorms.control import wait_for_seconds
+import math
+
+hub = MSHub()
+
+pixels = '99999:96669:96669:96669:99999'
+hub.light_matrix.show(pixels)
+
+wait_for_seconds(1)
+
+hub.light_matrix.off()
+
+print("Program complete")
