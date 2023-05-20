@@ -2,6 +2,46 @@
 
 A Python snippet utilizing the LEGO Spike light matrix, [MicroPython](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/), and a variety of commands: `set_pixel()`, `show()`, `show_image()`, and `play_animation()`.
 
+```py
+from mindstorms import MSHub
+from mindstorms.control import wait_for_seconds
+import math
+
+hub = MSHub()
+
+hub.light_matrix.set_pixel(0, 0, 100)
+
+wait_for_seconds(1)
+
+pixels = '99999:96669:96669:96669:99999'
+hub.light_matrix.show(pixels)
+
+wait_for_seconds(1)
+
+hub.light_matrix.show_image('HAPPY')
+
+wait_for_seconds(1)
+
+hub.light_matrix.show_image('ASLEEP')
+
+wait_for_seconds(1)
+
+anim_countdown = [
+    '09990:09000:09990:00090:09990',
+    '09090:09090:09990:00090:00090',
+    '09990:00090:09990:00090:09990',
+    '09990:00090:09990:09000:09990',
+    '00900:09900:00900:00900:09990',
+    '99999:99999:99999:99999:99999'
+]
+
+hub.light_matrix.play_animation(anim_countdown, 1, 'slide right', True)
+
+hub.light_matrix.off()
+
+print("Program complete")
+```
+
 ***
 
 ## Repo Resources
