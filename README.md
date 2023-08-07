@@ -1,4 +1,4 @@
-# LEGO Spike Hub and the Light Matrix
+# LEGO® Spike Hub and the Light Matrix
 
 A Python snippet utilizing the LEGO Spike light matrix, [MicroPython](https://lego.github.io/MINDSTORMS-Robot-Inventor-hub-API/), and a variety of commands: `set_pixel()`, `show()`, `show_image()`, and `play_animation()`.
 
